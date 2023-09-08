@@ -100,7 +100,8 @@
             android:textColor="@color/white"
             android:padding="15dp"
             android:layout_margin="30dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:onClick="abrirActCultivos"/>
 
 
     </RelativeLayout>
