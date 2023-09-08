@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recomendaciones"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:id="@+id/formulario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_main">
+
+        <include
+            layout="@layout/header"/>
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_below="@+id/header_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recomedaciones_descp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/titulo_temperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_temp"
+            android:layout_below="@+id/titulo"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/input_temperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_temperatura"
+            android:layout_margin="20dp"
+            android:hint="@string/hint_temp"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/titulo_estacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_estacion"
+            android:layout_below="@+id/input_temperatura"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/input_estacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_estacion"
+            android:layout_margin="20dp"
+            android:hint="@string/hint_estacion"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/titulo_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_region"
+            android:layout_below="@+id/input_estacion"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/input_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_region"
+            android:layout_margin="20dp"
+            android:hint="@string/hint_region"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buscar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_region"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/green_btn"
+            android:text="@string/buscar_btn"
+            android:textColor="@color/white"
+            android:padding="15dp"
+            android:layout_margin="30dp"
+            android:textSize="20sp"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
