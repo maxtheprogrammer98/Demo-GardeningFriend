@@ -1,16 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Cultivos">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="bienvenido!"
-        android:textSize="50sp"/>
+
+    <RelativeLayout
+        android:id="@+id/general_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/titulo_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/val_selec"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:id="@+id/temperatura_selec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_selec"
+            android:layout_below="@id/titulo_act"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/estacion_selec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/est_selec"
+            android:layout_below="@id/temperatura_selec"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/region_selec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_selec"
+            android:layout_below="@id/estacion_selec"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_margin="20dp"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/volver_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:text="@string/volver_btn"
+            android:textAlignment="center"
+            android:onClick="volverReco"/>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+
+
+
+</ScrollView>
