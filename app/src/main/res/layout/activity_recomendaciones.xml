@@ -47,31 +47,36 @@
                 android:id="@+id/rango0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rango_temp_0"/>
+                android:text="@string/rango_temp_0"
+                android:onClick="btnTempClicked"/>
 
             <RadioButton
                 android:id="@+id/rango1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rango_temp_1"/>
+                android:text="@string/rango_temp_1"
+                android:onClick="btnTempClicked"/>
 
             <RadioButton
                 android:id="@+id/rango2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rango_temp_2"/>
+                android:text="@string/rango_temp_2"
+                android:onClick="btnTempClicked"/>
 
             <RadioButton
                 android:id="@+id/rango3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rango_temp_3"/>
+                android:text="@string/rango_temp_3"
+                android:onClick="btnTempClicked"/>
 
             <RadioButton
                 android:id="@+id/rango4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rango_temp_4"/>
+                android:text="@string/rango_temp_4"
+                android:onClick="btnTempClicked"/>
 
 
         </RadioGroup>
@@ -99,25 +104,29 @@
                 android:id="@+id/opc_verano"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/est_verano"/>
+                android:text="@string/est_verano"
+                android:onClick="btnEstacClicked"/>
 
             <RadioButton
                 android:id="@+id/opc_otono"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/est_otono"/>
+                android:text="@string/est_otono"
+                android:onClick="btnEstacClicked"/>
 
             <RadioButton
                 android:id="@+id/opc_invierno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/est_invierno"/>
+                android:text="@string/est_invierno"
+                android:onClick="btnEstacClicked"/>
 
             <RadioButton
                 android:id="@+id/opc_primavera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/est_primavera"/>
+                android:text="@string/est_primavera"
+                android:onClick="btnEstacClicked"/>
 
         </RadioGroup>
 
@@ -144,25 +153,29 @@
                 android:id="@+id/reg_norte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/reg_norte"/>
+                android:text="@string/reg_norte"
+                android:onClick="btnRegClicked"/>
 
             <RadioButton
                 android:id="@+id/reg_centro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/reg_centro"/>
+                android:text="@string/reg_centro"
+                android:onClick="btnRegClicked"/>
 
             <RadioButton
                 android:id="@+id/reg_cuyo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/reg_cuyo"/>
+                android:text="@string/reg_cuyo"
+                android:onClick="btnRegClicked"/>
 
             <RadioButton
                 android:id="@+id/reg_patagonica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/reg_patagonica"/>
+                android:text="@string/reg_patagonica"
+                android:onClick="btnRegClicked"/>
 
 
 

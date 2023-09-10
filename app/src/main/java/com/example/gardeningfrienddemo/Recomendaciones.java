@@ -62,6 +62,10 @@ public class Recomendaciones extends AppCompatActivity {
         } else {
             tempSelec = "default";
         }
+
+        // muestra la opc selec
+        Toast avisoSelec = Toast.makeText(this, "seleccionaste: " + tempSelec, Toast.LENGTH_SHORT);
+        avisoSelec.show();
     }
 
     public void btnEstacClicked(View view){
@@ -90,6 +94,10 @@ public class Recomendaciones extends AppCompatActivity {
             estSelec = "default";
         }
 
+        //muestra la opc seleccionada
+        Toast avisoSelec = Toast.makeText(this, "seleccionaste: " + estSelec, Toast.LENGTH_SHORT);
+        avisoSelec.show();
+
     }
 
     public void btnRegClicked(View view){
@@ -117,6 +125,10 @@ public class Recomendaciones extends AppCompatActivity {
         } else {
             regSelec = "default";
         }
+
+        // este aviso muestra la seleccion del user
+        Toast avisoSelec = Toast.makeText(this,"seleccionaste" + regSelec, Toast.LENGTH_SHORT);
+        avisoSelec.show();
     }
 
     public void abrirActCultivos(View view){
