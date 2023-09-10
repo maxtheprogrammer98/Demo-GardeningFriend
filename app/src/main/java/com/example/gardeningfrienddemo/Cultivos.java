@@ -17,9 +17,10 @@ public class Cultivos extends AppCompatActivity {
         setContentView(R.layout.activity_cultivos);
 
         // se reciben los valores que se pasaron via 'putExtra':
-        String valorTemperatura = getIntent().getStringExtra("valTemperatura");
-        String valorEstacion = getIntent().getStringExtra("valEstacion");
-        String valorRegion = getIntent().getStringExtra("valRegion");
+        Intent intentRec = getIntent();
+        String valorTemperatura = intentRec.getStringExtra("valTemperatura");
+        String valorEstacion = intentRec.getStringExtra("valEstacion");
+        String valorRegion = intentRec.getStringExtra("valRegion");
 
         // se identifican los elementos de la interfaz a modificar:
         TextView temperatura = findViewById(R.id.temperatura_selec);
