@@ -28,7 +28,7 @@
                 android:contentDescription="@string/cultivo"/>
 
             <TextView
-                android:id="@+id/titulo_cult"
+                android:id="@+id/titulo_cult_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cultivo"
@@ -39,32 +39,32 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/titulo_reg"
+                android:id="@+id/titulo_reg_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/reg_centro"
-                android:layout_below="@+id/titulo_cult"
+                android:layout_below="@+id/titulo_cult_card"
                 android:layout_toEndOf="@+id/ic_cultivo"
                 android:textColor="@color/white"
                 android:layout_marginTop="3dp"/>
 
             <TextView
-                android:id="@+id/titulo_est"
+                android:id="@+id/titulo_est_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/est_otono"
-                android:layout_below="@id/titulo_reg"
+                android:layout_below="@id/titulo_reg_card"
                 android:layout_toEndOf="@id/ic_cultivo"
                 android:layout_marginTop="3dp"
                 android:textColor="@color/white"/>
 
             <TextView
-                android:id="@+id/titulo_temp"
+                android:id="@+id/titulo_temp_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rango_temp_2"
                 android:textColor="@color/white"
-                android:layout_below="@id/titulo_est"
+                android:layout_below="@id/titulo_est_card"
                 android:layout_toEndOf="@id/ic_cultivo"
                 android:layout_marginTop="3dp"/>
 

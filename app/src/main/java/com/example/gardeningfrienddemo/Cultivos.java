@@ -1,6 +1,8 @@
 package com.example.gardeningfrienddemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +11,18 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class Cultivos extends AppCompatActivity {
+
+    // se generan los modelos
+    ArrayList<cultivosModels> modelsCultivos = new ArrayList<>();
+    int[] imagenesCultivos = {R.mipmap.ic_aceituna, R.mipmap.ic_calabaza, R.mipmap.ic_cebolla, R.mipmap.ic_lechuga};
+
+    //parametros del usuario
+    String valorTemperatura;
+    String valorEstacion;
+    String valorRegion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,23 +31,42 @@ public class Cultivos extends AppCompatActivity {
 
         // se reciben los valores que se pasaron via 'putExtra':
         Intent intentRec = getIntent();
-        String valorTemperatura = intentRec.getStringExtra("valTemperatura");
-        String valorEstacion = intentRec.getStringExtra("valEstacion");
-        String valorRegion = intentRec.getStringExtra("valRegion");
+        valorTemperatura = intentRec.getStringExtra("valTemperatura");
+        valorEstacion = intentRec.getStringExtra("valEstacion");
+        valorRegion = intentRec.getStringExtra("valRegion");
 
-        // se identifican los elementos de la interfaz a modificar:
-        TextView temperatura = findViewById(R.id.temperatura_selec);
-        TextView estacion = findViewById(R.id.estacion_selec);
-        TextView region = findViewById(R.id.region_selec);
+        //se identifica el recyclerview de la activity
+        RecyclerView recycler = findViewById(R.id.recycler_cultivos);
 
-        // se agregan los valores ingresados en la act anterior:
-        temperatura.append(valorTemperatura);
-        estacion.append(valorEstacion);
-        region.append(valorRegion);
+        //se inicializa funcion para agregar las tarjetas
+        addModelsCultivos();
+
+        // se activa el "adapter" para que pase las tarjetas al recycler
+        Cultivos_RecyclerViewAdapter adapter = new Cultivos_RecyclerViewAdapter(this,modelsCultivos);
+        recycler.setAdapter(adapter);
+        recycler.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void volverReco(View view){
         Intent intent = new Intent(this, Recomendaciones.class);
         startActivity(intent);
+    }
+
+    private void addModelsCultivos(){
+        // 1 - se extraen todos los recursos para instanciar los cultivos
+        String[] cultivosNombre = getResources().getStringArray(R.array.cultivos_nombres);
+        String[] cultivosTemp = getResources().getStringArray(R.array.culvtivos_temp);
+        String[] cultivosEst = getResources().getStringArray(R.array.cultivos_estacion);
+        String[] cultivosReg = getResources().getStringArray(R.array.cultivos_region);
+
+        // 2 - se iteran los arrays con la informacion y se generan nuevas instancias
+        for (int i = 0; i < cultivosNombre.length; i++) {
+            // se valida que coincida con los parametros del usuario
+            if(cultivosTemp[i] == valorTemperatura && cultivosEst[i] == valorEstacion && cultivosReg[i] == valorRegion){
+                // si es correcto se crean las instancias correspondientes
+                modelsCultivos.add(new cultivosModels(cultivosNombre[i], cultivosTemp[i], cultivosEst[i], cultivosReg[i], imagenesCultivos[i]));
+            }
+        }
+
     }
 }

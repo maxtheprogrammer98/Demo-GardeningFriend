@@ -17,10 +17,10 @@
     <string name="rango_temp_3">20°C - 30°C</string>
     <string name="rango_temp_4">+30°C</string>
 
-    <string name="est_verano">verano</string>
-    <string name="est_otono">otoño</string>
-    <string name="est_invierno">invierno</string>
-    <string name="est_primavera">primavera</string>
+    <string name="est_verano">Verano</string>
+    <string name="est_otono">Otoño</string>
+    <string name="est_invierno">Invierno</string>
+    <string name="est_primavera">Primavera</string>
 
     <string name="val_selec">Valores seleccionados</string>
     <string name="temp_selec">Temperatura: </string>
@@ -32,35 +32,43 @@
     <string name="reg_centro">Centro - Pampeana</string>
     <string name="reg_cuyo">Cuyo</string>
     <string name="reg_patagonica">Patagonica</string>
+    <string name="cultivo">cultivo</string>
+
 
     <string-array name="cultivos_region">
-        <item>Centro - pampeana </item>
-        <item>Centro - pampeana </item>
-        <item>Centro - pampeana </item>
-        <item>Centro - pampeana </item>
+        <item>Centro - Pampeana</item>
+        <item>Centro - Pampeana</item>
+        <item>Centro - Pampeana</item>
+        <item>Centro - Pampeana</item>
     </string-array>
 
     <string-array name="culvtivos_temp">
-        <item> 10°C - 30°C</item>
-        <item> 10°C - 30°C</item>
-        <item> 10°C - 30°C</item>
-        <item> 10°C - 30°C</item>
+        <item>20°C - 30°C</item>
+        <item>20°C - 30°C</item>
+        <item>20°C - 30°C</item>
+        <item>20°C - 30°C</item>
     </string-array>
 
     <string-array name="cultivos_nombres">
         <item>Aceituna</item>
-        <item> Calabaza </item>
-        <item> Cebolla </item>
-        <item> Lechuga </item>
+        <item>Calabaza</item>
+        <item>Cebolla</item>
+        <item>Lechuga</item>
     </string-array>
 
     <string-array name="cultivos_estacion">
         <item>Verano</item>
+        <item>Verano</item>
         <item>Otoño</item>
-        <item>Invierno</item>
         <item>Primavera</item>
     </string-array>
 
-    <string name="cultivo">cultivo</string>
+    <string-array name="cultivos_img">
+        <item>"@minmap/ic_aceituna.png"</item>
+        <item>"@minmap/ic_calabaza.png"</item>
+        <item>"@minmap/ic_cebolla.png"</item>
+        <item>"@minmap/ic_lechuga.png"</item>
+    </string-array>
+
 
 </resources>
