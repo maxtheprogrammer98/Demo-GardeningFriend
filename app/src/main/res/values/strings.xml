@@ -33,5 +33,34 @@
     <string name="reg_cuyo">Cuyo</string>
     <string name="reg_patagonica">Patagonica</string>
 
+    <string-array name="cultivos_region">
+        <item>Centro - pampeana </item>
+        <item>Centro - pampeana </item>
+        <item>Centro - pampeana </item>
+        <item>Centro - pampeana </item>
+    </string-array>
+
+    <string-array name="culvtivos_temp">
+        <item> 10°C - 30°C</item>
+        <item> 10°C - 30°C</item>
+        <item> 10°C - 30°C</item>
+        <item> 10°C - 30°C</item>
+    </string-array>
+
+    <string-array name="cultivos_nombres">
+        <item>Aceituna</item>
+        <item> Calabaza </item>
+        <item> Cebolla </item>
+        <item> Lechuga </item>
+    </string-array>
+
+    <string-array name="cultivos_estacion">
+        <item>Verano</item>
+        <item>Otoño</item>
+        <item>Invierno</item>
+        <item>Primavera</item>
+    </string-array>
+
+    <string name="cultivo">cultivo</string>
 
 </resources>
