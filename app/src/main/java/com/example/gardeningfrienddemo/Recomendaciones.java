@@ -8,6 +8,7 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -127,7 +128,7 @@ public class Recomendaciones extends AppCompatActivity {
         }
 
         // este aviso muestra la seleccion del user
-        Toast avisoSelec = Toast.makeText(this,"seleccionaste" + regSelec, Toast.LENGTH_SHORT);
+        Toast avisoSelec = Toast.makeText(this,"seleccionaste: " + regSelec, Toast.LENGTH_SHORT);
         avisoSelec.show();
     }
 

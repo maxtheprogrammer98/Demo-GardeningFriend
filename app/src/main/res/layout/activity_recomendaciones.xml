@@ -25,6 +25,11 @@
             android:textSize="20sp"
             android:layout_margin="20dp"/>
 
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/titulo_temperatura"/>
+
         <TextView
             android:id="@+id/titulo_temperatura"
             android:layout_width="match_parent"
@@ -81,6 +86,10 @@
 
         </RadioGroup>
 
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/titulo_estacion"/>
 
         <TextView
             android:id="@+id/titulo_estacion"
@@ -129,6 +138,11 @@
                 android:onClick="btnEstacClicked"/>
 
         </RadioGroup>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/titulo_region"/>
 
         <TextView
             android:id="@+id/titulo_region"

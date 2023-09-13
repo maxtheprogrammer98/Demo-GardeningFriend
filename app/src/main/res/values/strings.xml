@@ -5,9 +5,9 @@
     <string name="recomedaciones_descp">Selecciona las siguientes opciones para que el sistema pueda recomendarte los cultivos mas optimos para tu caso.</string>
     <string name="titulo_temp">Temperatura Promedio </string>
     <string name="hint_temp">Ingresa la temperatura (valor entero)</string>
-    <string name="titulo_estacion">Estación actual</string>
+    <string name="titulo_estacion">Estación de siembra</string>
     <string name="hint_estacion">Ingresa la estación</string>
-    <string name="titulo_region">Region</string>
+    <string name="titulo_region">Selecciona tu region</string>
     <string name="hint_region">Ingresa tu region</string>
     <string name="buscar_btn">Buscar</string>
 

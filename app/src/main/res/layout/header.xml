@@ -2,7 +2,7 @@
     android:id="@+id/header_main"
     android:layout_height="125dp"
     android:layout_width="match_parent"
-    android:background="@color/green_med">
+    android:background="@mipmap/header">
 
     <ImageView
         android:layout_width="wrap_content"
