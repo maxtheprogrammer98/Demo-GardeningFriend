@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class Cultivos extends AppCompatActivity {
+public class Cultivos extends AppCompatActivity implements cltDetalles {
 
     // se generan los modelos
     ArrayList<cultivosModels> modelsCultivos = new ArrayList<>();
@@ -44,7 +44,7 @@ public class Cultivos extends AppCompatActivity {
         addModelsCultivos();
 
         // se activa el "adapter" para que pase las tarjetas al recycler
-        Cultivos_RecyclerViewAdapter adapter = new Cultivos_RecyclerViewAdapter(this,modelsCultivos);
+        Cultivos_RecyclerViewAdapter adapter = new Cultivos_RecyclerViewAdapter(this,modelsCultivos,this);
         recycler.setAdapter(adapter);
         recycler.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -80,5 +80,11 @@ public class Cultivos extends AppCompatActivity {
             Toast.makeText(this, "ningun cultivo coincide con los parametros seleccionados, lo sentimos", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        // basicamente en este metodo se crea un "intent" para pasar todos
+        // los propiedades necesarias para ver los detalles del cultivo
     }
 }

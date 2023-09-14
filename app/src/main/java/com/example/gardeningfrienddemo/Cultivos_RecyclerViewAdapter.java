@@ -17,14 +17,15 @@ import java.util.ArrayList;
 
 public class Cultivos_RecyclerViewAdapter extends RecyclerView.Adapter<Cultivos_RecyclerViewAdapter.MyViewHolder> {
     // atributos
+    private final cltDetalles interfazCultivos;
     Context context;
     ArrayList<cultivosModels> cultModel;
 
-
     // constrcutor
-    public Cultivos_RecyclerViewAdapter(Context context, ArrayList<cultivosModels> cultModelo){
+    public Cultivos_RecyclerViewAdapter(Context context, ArrayList<cultivosModels> cultModelo, cltDetalles interfazCultivos){
         this.context = context;
         this.cultModel = cultModelo;
+        this.interfazCultivos = interfazCultivos;
     }
 
     @NonNull
@@ -34,7 +35,7 @@ public class Cultivos_RecyclerViewAdapter extends RecyclerView.Adapter<Cultivos_
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.cultivos_recycler, parent, false);
 
-        return new Cultivos_RecyclerViewAdapter.MyViewHolder(view);
+        return new Cultivos_RecyclerViewAdapter.MyViewHolder(view, interfazCultivos);
     }
 
     @Override
@@ -61,7 +62,7 @@ public class Cultivos_RecyclerViewAdapter extends RecyclerView.Adapter<Cultivos_
         TextView nombre, temperatura, estacion, region;
 
         //constructor
-        public MyViewHolder(@NonNull View itemView){
+        public MyViewHolder(@NonNull View itemView, cltDetalles interfazCultivos){
             super(itemView);
             // se identifican los atributos de las tarjetas
             icono = itemView.findViewById(R.id.ic_cultivo);
@@ -70,6 +71,19 @@ public class Cultivos_RecyclerViewAdapter extends RecyclerView.Adapter<Cultivos_
             estacion = itemView.findViewById(R.id.titulo_est_card);
             region = itemView.findViewById(R.id.titulo_reg_card);
 
+            //se agrega un "click event listener" a cada elemento
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view){
+                    if(interfazCultivos != null){
+                        int pos = getAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION){
+                            interfazCultivos.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }

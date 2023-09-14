@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bckg_2">
+
+    <RelativeLayout
+        android:id="@+id/wrapper_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/green_darkish">
+
+        <ImageView
+            android:id="@+id/img_cultivo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_calabaza"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wrapper_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wrapper_header">
+
+        <TextView
+            android:id="@+id/titl_cultivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cultivo"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/temp_cultivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_selec"
+            android:layout_below="@id/titl_cultivo"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/temp_estacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/est_selec"
+            android:layout_below="@id/temp_cultivo"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/region_cultivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_selec"
+            android:layout_below="@id/temp_estacion"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
