@@ -84,7 +84,14 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
 
     @Override
     public void onItemClick(int position) {
-        // basicamente en este metodo se crea un "intent" para pasar todos
-        // los propiedades necesarias para ver los detalles del cultivo
+        // 1 - se crea intent para dirigir al user a la pantalla con info extra:
+        Intent intent = new Intent(Cultivos.this, cultivos_detalles.class);
+        // 2 - se pasan las propiedades necesarias:
+        intent.putExtra("NOMBRE_CULTIVO", modelsCultivos.get(position).getNombre());
+        intent.putExtra("TEMPERTAURA_CULTIVO", modelsCultivos.get(position).getTemperatura());
+        intent.putExtra("ESTACION_CULTIVO", modelsCultivos.get(position).getEstacion());
+        intent.putExtra("REGION_CULTIVO", modelsCultivos.get(position).getRegion());
+        // 3 - se inicialza la nueva actividad (intent)
+        startActivity(intent);
     }
 }

@@ -134,7 +134,7 @@ public class Recomendaciones extends AppCompatActivity {
 
     public void abrirActCultivos(View view){
         // 1 - se crea intent
-        Intent intent = new Intent(this, Cultivos.class);
+        Intent intent = new Intent(Recomendaciones.this, Cultivos.class);
 
         // aviso de error en caso que no se haya selec ninguna opcion
         Toast errorCampos = Toast.makeText(this,"debes seleccionar una opcion en cada caso", Toast.LENGTH_SHORT);

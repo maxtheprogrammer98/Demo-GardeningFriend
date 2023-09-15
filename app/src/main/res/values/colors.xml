@@ -10,4 +10,5 @@
     <color name="green_med">#46B36D</color>
     <color name="green_light">#78EAD9</color>
     <color name="green_darkish">#FF018786</color>
+    <color name="green_darker">#015554</color>
 </resources>
