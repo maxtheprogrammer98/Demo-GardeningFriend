@@ -71,4 +71,50 @@
     </string-array>
 
 
+    <string-array name="cultivos_info">
+        <item>La aceituna u oliva es el fruto del olivo (Olea europaea), árbol que procede
+            de Grecia y Asia Menor, donde todavía pueden hallarse en bosques de olivos silvestres o
+            «acebuches», donde no tiene el característico alineamiento regular propio de las plantas
+            cultivadas. Las aceitunas se consumen tanto molidas (como aceite) como en fresco pasando
+            primero por un proceso de maceración que elimina el sabor amargo que tienen debido a un
+            glucósido conocido como oleuropeína, o luego de un proceso de curado del fruto.
+            En España son muy populares las aceitunas aliñadas tomadas como aperitivo.</item>
+        <item>La calabaza es una baya de cáscara dura.
+            Es el fruto de las cucurbitáceas (del género Cucurbita) y es un fruto de tipo pepónide.
+            Algunos autores también incluyen a los frutos del género Lagenaria, y a los frutos de
+            las plantas de la familia de las bignoniáceas, como los "árboles de calabazas" Crescentia
+            y Amphitecna. Las calabazas se encuentran tanto de manera silvestre como cultivada.
+            Las calabazas, incluidas las silvestres, son de tamaño grande, de más de 5 cm de
+            diámetro.1​ Presentan una gran variedad de formas, tamaños, texturas, sabores y colores
+            . Los frutos se pueden cosechar tanto maduros como inmaduros, dependiendo del uso fina
+            l que se le de al fruto.2​</item>
+        <item>
+            Allium cepa, comúnmente conocida como cebolla,
+            es una planta herbácea bienal perteneciente a la familia de las amarilidáceas.
+            Es la especie más cultivada del género Allium, el cual contiene varias especies que se
+            denominan «cebollas» y que se cultivan como alimento. Ejemplos de las mismas son la
+            cebolla de verdeo (Allium fistulosum), la cebolla escalonia (Allium ascalonicum) y
+            la cebolla de hoja o ciboulette (Allium schoenoprasum).2​3​
+        </item>
+        <item>
+            La lechuga (Lactuca sativa) es una planta anual de la familia Asteraceae.
+            Se cultiva sobre todo como verdura de hoja, pero a veces también por su tallo y sus semillas.
+            La lechuga se utiliza sobre todo para las ensaladas, aunque también se ve en otros tipos
+            de comida, como sopas, emparedados, sándwiches y envoltorios; también se puede asar
+            a la parrilla.1​ Una variedad, la lechuga china (lechuga espárrago), se cultiva por
+            sus tallos, que se consumen crudos o cocidos. Además de su uso principal como hoja verde,
+            también ha adquirido un significado religioso y medicinal durante siglos de consumo humano.
+            Originalmente, Europa y América del Norte dominaban el mercado de la lechuga, pero a
+            finales del siglo xx el consumo de lechuga se había extendido por todo el mundo. En 2021,
+            la producción mundial de lechuga y achicoria era de 27 millones de toneladas,
+            el 53 % de las cuales procedía de China.2​
+        </item>
+    </string-array>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec vel
+        egestas dolor,nec dignissim metus.Donec augue elit, rhoncus ac sodales id,
+        porttitor vitae est.
+        Donec laoreet rutrum libero sed pharetra.</string>
+
+
 </resources>

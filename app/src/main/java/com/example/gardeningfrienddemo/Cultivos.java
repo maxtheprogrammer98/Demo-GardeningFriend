@@ -63,13 +63,14 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
         String[] cultivosTemp = getResources().getStringArray(R.array.culvtivos_temp);
         String[] cultivosEst = getResources().getStringArray(R.array.cultivos_estacion);
         String[] cultivosReg = getResources().getStringArray(R.array.cultivos_region);
+        String[] cultivosInfo = getResources().getStringArray(R.array.cultivos_info);
 
         // 2 - se iteran los arrays con la informacion y se generan nuevas instancias
         for (int i = 0; i < cultivosNombre.length; i++) {
             // se valida que coincida con los parametros del usuario
             if(cultivosTemp[i].toString().equals(valorTemperatura) && cultivosEst[i].toString().equals(valorEstacion) && cultivosReg[i].toString().equals(valorRegion)){
                 // si es correcto se crean las instancias correspondientes
-                modelsCultivos.add(new cultivosModels(cultivosNombre[i], cultivosTemp[i], cultivosEst[i], cultivosReg[i], imagenesCultivos[i]));
+                modelsCultivos.add(new cultivosModels(cultivosNombre[i], cultivosTemp[i], cultivosEst[i], cultivosReg[i], cultivosInfo[i],imagenesCultivos[i]));
                 resultados = true;
             }
         }
@@ -86,11 +87,11 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
     public void onItemClick(int position) {
         // 1 - se crea intent para dirigir al user a la pantalla con info extra:
         Intent intent = new Intent(Cultivos.this, cultivos_detalles.class);
+
         // 2 - se pasan las propiedades necesarias:
         intent.putExtra("NOMBRE_CULTIVO", modelsCultivos.get(position).getNombre());
-        intent.putExtra("TEMPERTAURA_CULTIVO", modelsCultivos.get(position).getTemperatura());
-        intent.putExtra("ESTACION_CULTIVO", modelsCultivos.get(position).getEstacion());
-        intent.putExtra("REGION_CULTIVO", modelsCultivos.get(position).getRegion());
+        intent.putExtra("INFO_CULTIVO", modelsCultivos.get(position).getInfo());
+
         // 3 - se inicialza la nueva actividad (intent)
         startActivity(intent);
     }

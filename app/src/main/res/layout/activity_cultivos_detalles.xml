@@ -1,84 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bckg_2">
+    android:background="@color/white">
 
     <RelativeLayout
-        android:id="@+id/wrapper_header"
+        android:id="@+id/main_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/green_darkish">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/img_cultivo"
-            android:layout_width="150dp"
+        <RelativeLayout
+            android:id="@+id/header_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/green_darkish">
+
+            <ImageView
+                android:id="@+id/ic_cultivo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/info_cultivo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_calabaza"
-            android:layout_centerInParent="true"/>
+            android:layout_below="@id/header_wrapper">
+
+            <TextView
+                android:id="@+id/titulo_cultivo_detalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cultivo"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:layout_marginVertical="20sp"/>
+
+            <TextView
+                android:id="@+id/info_cultivo_detalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titulo_cultivo_detalles"
+                android:text="@string/lorem_ipsum"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/wrapper_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wrapper_header">
-
-        <TextView
-            android:id="@+id/titl_cultivo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cultivo"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
-
-        <TextView
-            android:id="@+id/temp_cultivo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temp_selec"
-            android:layout_below="@id/titl_cultivo"
-            android:textSize="30sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:id="@+id/est_cultivo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/est_selec"
-            android:layout_below="@id/temp_cultivo"
-            android:textSize="30sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"/>
-
-        <TextView
-            android:id="@+id/region_cultivo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/reg_selec"
-            android:layout_below="@id/est_cultivo"
-            android:textSize="30sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"/>
-
-    </RelativeLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_volver_recom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_dark_green"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:text="@string/volver_btn"
-        android:layout_margin="20dp"
-        android:textSize="20sp"
-        android:padding="20dp"
-        android:textColor="@color/white"/>
-
-
-</RelativeLayout>
+</ScrollView>
