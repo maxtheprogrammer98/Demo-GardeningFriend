@@ -34,6 +34,8 @@
     <string name="reg_patagonica">Patagonica</string>
     <string name="cultivo">cultivo</string>
 
+    <string name="buscar_otro">Buscar otro</string>
+
 
     <string-array name="cultivos_region">
         <item>Centro - Pampeana</item>

@@ -30,6 +30,18 @@ public class cultivos_detalles extends AppCompatActivity {
 
     }
 
+    public void btn_volver_reco(View view){
+        // 1 - se crea el intent
+        Intent intent = new Intent(this, Recomendaciones.class);
+        // 2 - se redirige al nuevo intent
+        startActivity(intent);
+    }
+
+    public void btn_volver_cultivos(){
+        // se cierra la actividad actual mostrando la act previa
+        finish();
+    }
+
 
 
 

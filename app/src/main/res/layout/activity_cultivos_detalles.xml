@@ -50,6 +50,32 @@
 
         </RelativeLayout>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_volver_reco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar_otro"
+            android:background="@drawable/green_btn"
+            android:textColor="@color/white"
+            android:layout_below="@id/info_cultivo"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:onClick="btn_volver_reco"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_volver_cultivos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_btn"
+            android:text="@string/volver_btn"
+            android:textColor="@color/white"
+            android:layout_below="@id/btn_volver_reco"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="20dp"
+            android:onClick="btn_volver_cultivos"
+            android:layout_marginBottom="20dp"/>
     </RelativeLayout>
+
 
 </ScrollView>
