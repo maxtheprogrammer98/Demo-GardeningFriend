@@ -28,16 +28,11 @@ public class cultivos_detalles extends AppCompatActivity {
 
         // 2 - estos nuevos valores e interpolan a la plantilla XML
         textView_titulo.setText(nombreCultivo);
-        textView_temperatura.append(tempCultivo);
-        textView_estacion.append(estacionCultivo);
-        textView_region.append(regionCultivo);
+        textView_temperatura.setText(tempCultivo);
+        textView_estacion.setText(estacionCultivo);
+        textView_region.setText(regionCultivo);
 
     }
 
-    //public void volverRecom(View view){
-        // 1 - se crea intent para volver a "cultivos (recomendaciones)"
-    //    Intent intent = new Intent(this, Cultivos.class);
-        // 2 - se inicializa dicha actividad
-    //    startActivity(intent);
-    //}
+
 }

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 
-public class Recomendaciones extends AppCompatActivity {
+public class Recomendaciones extends AppCompatActivity{
 
     //contiene el texto de la opc seleccionada
     String tempSelec;
