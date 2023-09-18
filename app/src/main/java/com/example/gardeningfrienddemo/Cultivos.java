@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.ktx.Firebase;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -55,25 +59,19 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
     }
 
     private void addModelsCultivos(){
+        // instancia que representa la BD de FireBase
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
         // flag que se activa si hay resultados que coinciden con la busqueda
         boolean resultados = false;
 
-        // 1 - se extraen todos los recursos para instanciar los cultivos
-        String[] cultivosNombre = getResources().getStringArray(R.array.cultivos_nombres);
-        String[] cultivosTemp = getResources().getStringArray(R.array.culvtivos_temp);
-        String[] cultivosEst = getResources().getStringArray(R.array.cultivos_estacion);
-        String[] cultivosReg = getResources().getStringArray(R.array.cultivos_region);
-        String[] cultivosInfo = getResources().getStringArray(R.array.cultivos_info);
+        // 1 - se extraen los documentos de firebase
+        //db.collection("cultivos")
+         //       .get()
 
-        // 2 - se iteran los arrays con la informacion y se generan nuevas instancias
-        for (int i = 0; i < cultivosNombre.length; i++) {
-            // se valida que coincida con los parametros del usuario
-            if(cultivosTemp[i].toString().equals(valorTemperatura) && cultivosEst[i].toString().equals(valorEstacion) && cultivosReg[i].toString().equals(valorRegion)){
-                // si es correcto se crean las instancias correspondientes
-                modelsCultivos.add(new cultivosModels(cultivosNombre[i], cultivosTemp[i], cultivosEst[i], cultivosReg[i], cultivosInfo[i],imagenesCultivos[i]));
-                resultados = true;
-            }
-        }
+
+        // 2 - los documentos son añadidos a un nuevo array
+
 
         // si ningun resultado coincide con la busqueda
         if(!resultados){
