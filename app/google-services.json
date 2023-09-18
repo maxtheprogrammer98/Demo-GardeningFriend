@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "649790262804",
+    "project_id": "gardeningfrienddemo",
+    "storage_bucket": "gardeningfrienddemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649790262804:android:e0016bb9184bd592fd6101",
+        "android_client_info": {
+          "package_name": "com.example.gardeningfrienddemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACcVp_7KDePjAdesbI-KDI_EnHvjF8l-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
