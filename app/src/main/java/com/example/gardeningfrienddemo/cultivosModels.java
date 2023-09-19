@@ -6,12 +6,12 @@ public class cultivosModels {
     String temperatura;
     String estacion;
     String region;
-    int img;
+    String img;
     String info;
 
 
     // constructor
-    public cultivosModels(String nombre, String temperatura, String estacion, String region, String info, int img) {
+    public cultivosModels(String nombre, String temperatura, String estacion, String region, String info, String img) {
         this.nombre = nombre;
         this.temperatura = temperatura;
         this.estacion = estacion;
@@ -38,7 +38,8 @@ public class cultivosModels {
     }
 
     public int getImg() {
-        return img;
+       int img_int = Integer.parseInt(img);
+       return  img_int;
     }
 
     public String getInfo() {

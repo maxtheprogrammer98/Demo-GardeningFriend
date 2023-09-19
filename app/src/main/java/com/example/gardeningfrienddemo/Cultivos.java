@@ -1,5 +1,6 @@
 package com.example.gardeningfrienddemo;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,8 +12,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.ktx.Firebase;
 
 import org.w3c.dom.Text;
@@ -66,18 +71,40 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
         boolean resultados = false;
 
         // 1 - se extraen los documentos de firebase
-        //db.collection("cultivos")
-         //       .get()
+        db.collection("cultivos")
+                // se realiza una get request para acceder a todos los documentos
+                .get()
+                // este evento valida si la peticion se dio exitosamente
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+                            for (QueryDocumentSnapshot document : task.getResult()){
+                                // se guardan las propiedades en variables para despues instanciar
+                                String nombre = document.getString("nombre");
+                                String temperatura = document.getString("temperatura");
+                                String estacion = document.getString("estacion");
+                                String region = document.getString("region");
+                                String icono = document.getString("icono");
+                                String info = document.getString("informacion");
 
+                                // se crea un nuevo cult en base a la info recibida
+                                cultivosModels cultivo = new cultivosModels(nombre,temperatura,estacion,region,info,icono);
 
-        // 2 - los documentos son añadidos a un nuevo array
+                                // se agrega al array (si coincide con los parametros del user)
+                                if(cultivo.temperatura.equals(valorTemperatura) && cultivo.estacion.equals(valorEstacion) && cultivo.region.equals(valorRegion)){
+                                    modelsCultivos.add(cultivo);
 
+                                } else {
+                                    Toast.makeText(Cultivos.this, "ningún cultivo coincide con los parametros brindados", Toast.LENGTH_SHORT);
+                                }
+                            }
+                        } else {
+                            Toast.makeText(Cultivos.this, "ha ocurrido un error al conectar con la BD", Toast.LENGTH_SHORT).show();
 
-        // si ningun resultado coincide con la busqueda
-        if(!resultados){
-            //mensaje de error
-            Toast.makeText(this, "ningun cultivo coincide con los parametros seleccionados, lo sentimos", Toast.LENGTH_SHORT).show();
-        }
+                        }
+                    }
+                });
 
     }
 
