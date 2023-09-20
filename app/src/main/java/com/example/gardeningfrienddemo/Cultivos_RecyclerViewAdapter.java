@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -42,11 +44,16 @@ public class Cultivos_RecyclerViewAdapter extends RecyclerView.Adapter<Cultivos_
     @Override
     public void onBindViewHolder(@NonNull Cultivos_RecyclerViewAdapter.MyViewHolder holder, int position) {
         // asigna un valor numerico representado la posicion de cada tarjeta
+        // y se añade el texto dinamico de cada carac
         holder.nombre.setText(cultModel.get(position).getNombre());
         holder.temperatura.setText(cultModel.get(position).getTemperatura());
         holder.estacion.setText(cultModel.get(position).getEstacion());
         holder.region.setText(cultModel.get(position).getRegion());
-        holder.icono.setImageResource(cultModel.get(position).getImg());
+        // se carga el icono del cultivo
+        Glide.with(context)
+                .load(cultModel.get(position).getImg())
+                .into(holder.icono);
+
     }
 
     @Override

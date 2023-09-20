@@ -37,9 +37,8 @@ public class cultivosModels {
         return region;
     }
 
-    public int getImg() {
-       int img_int = Integer.parseInt(img);
-       return  img_int;
+    public String getImg() {
+       return img;
     }
 
     public String getInfo() {

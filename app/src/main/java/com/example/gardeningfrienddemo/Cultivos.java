@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,12 +25,13 @@ import com.google.firebase.ktx.Firebase;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Cultivos extends AppCompatActivity implements cltDetalles {
 
     // se generan los modelos
     ArrayList<cultivosModels> modelsCultivos = new ArrayList<>();
-    int[] imagenesCultivos = {R.mipmap.ic_aceituna, R.mipmap.ic_calabaza, R.mipmap.ic_cebolla, R.mipmap.ic_lechuga};
+    //int[] imagenesCultivos = {R.mipmap.ic_aceituna, R.mipmap.ic_calabaza, R.mipmap.ic_cebolla, R.mipmap.ic_lechuga};
 
     //parametros del usuario
     String valorTemperatura;
@@ -67,9 +70,6 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
         // instancia que representa la BD de FireBase
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        // flag que se activa si hay resultados que coinciden con la busqueda
-        boolean resultados = false;
-
         // 1 - se extraen los documentos de firebase
         db.collection("cultivos")
                 // se realiza una get request para acceder a todos los documentos
@@ -79,6 +79,10 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()){
+                            // la request se realizo exitosamente
+                            Toast success = Toast.makeText(Cultivos.this, "peticion exitosa", Toast.LENGTH_SHORT);
+                            success.show();
+
                             for (QueryDocumentSnapshot document : task.getResult()){
                                 // se guardan las propiedades en variables para despues instanciar
                                 String nombre = document.getString("nombre");
@@ -94,15 +98,22 @@ public class Cultivos extends AppCompatActivity implements cltDetalles {
                                 // se agrega al array (si coincide con los parametros del user)
                                 if(cultivo.temperatura.equals(valorTemperatura) && cultivo.estacion.equals(valorEstacion) && cultivo.region.equals(valorRegion)){
                                     modelsCultivos.add(cultivo);
-
-                                } else {
-                                    Toast.makeText(Cultivos.this, "ningún cultivo coincide con los parametros brindados", Toast.LENGTH_SHORT);
                                 }
                             }
                         } else {
                             Toast.makeText(Cultivos.this, "ha ocurrido un error al conectar con la BD", Toast.LENGTH_SHORT).show();
-
                         }
+
+                        //mensaje en caso de que ningun cultivo coincida con los pametros del user
+                        if(modelsCultivos.size() == 0){
+                            Toast.makeText(Cultivos.this, "ningun cultivo coincide con los parametros brindados", Toast.LENGTH_SHORT).show();
+                        } else{
+                            // probando si los cultivos se agregan al arraylist
+                            int cant = modelsCultivos.size();
+                            String cant_text = Integer.toString(cant);
+                            Toast.makeText(Cultivos.this, "cantidad cultivos " + cant_text, Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 });
 
