@@ -49,7 +49,7 @@ public class Cultivos_RecyclerViewAdapter extends RecyclerView.Adapter<Cultivos_
         holder.temperatura.setText(cultModel.get(position).getTemperatura());
         holder.estacion.setText(cultModel.get(position).getEstacion());
         holder.region.setText(cultModel.get(position).getRegion());
-        // se carga el icono del cultivo
+        // se carga el icono del cultivo (a traves de su URL)
         Glide.with(context)
                 .load(cultModel.get(position).getImg())
                 .into(holder.icono);
